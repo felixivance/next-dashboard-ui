@@ -1,11 +1,25 @@
-import React from 'react'
+import UserCard from '@/components/UserCard';
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const AdminPage = (props: Props) => {
   return (
-    <div>AdminPage</div>
-  )
-}
+    <div className="p-4 flex gap-4 flex-col md:flex-row">
+      {/* left */}
+      <div className="w-full lg:w-2/3">
+        <div className='flex gap-4 justify-between flex-wrap'>
+          <UserCard type="students" />
+          <UserCard type="teachers" />
+          <UserCard type="parents" />
+          <UserCard type="staffs" />
 
-export default AdminPage
+        </div>
+      </div>
+      {/* right */}
+      <div className="w-full lg:w-1/3">right</div>
+    </div>
+  );
+};
+
+export default AdminPage;
