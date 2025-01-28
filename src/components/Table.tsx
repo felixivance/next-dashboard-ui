@@ -1,10 +1,10 @@
-import { Column, Teacher } from '@/lib/dataTypes';
+import { Column } from '@/lib/dataTypes';
 import React from 'react';
 
 type Props = {
   columns: Column[];
   renderRow: (item: any) => React.ReactNode;
-  data: Teacher[];
+  data: any[];
 };
 
 const Table = ({ columns, data, renderRow }: Props) => {
@@ -17,7 +17,7 @@ const Table = ({ columns, data, renderRow }: Props) => {
             ))}
           </tr>
         </thead>
-        <tbody>{data.map((teacher) => renderRow(teacher))}</tbody>
+        <tbody>{data.map((item) => renderRow(item))}</tbody>
       </table>
   );
 };
