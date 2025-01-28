@@ -15,7 +15,7 @@ const BigCalendar = (props: Props) => {
         setView(selectedView);
     }
   return (
-    <div>
+    <div className='px-4'>
         <Calendar
         localizer={localizer}
         events={calendarEvents}
