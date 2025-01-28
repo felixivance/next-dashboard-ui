@@ -13,7 +13,7 @@ const StudentPage = (props: Props) => {
       <div className="w-full xl:w-2/3 bg-white ">
 
         <div className="p-4 rounded-md">
-          <h1 className='text-xl font-semibold'>Felix (4A)</h1>
+          <h1 className='text-xl font-semibold'>Student - Felix (4A)</h1>
         </div>
 
         <BigCalendar />
