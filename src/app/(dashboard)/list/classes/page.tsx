@@ -2,7 +2,7 @@ import Pagination from '@/components/Pagination';
 import Table from '@/components/Table';
 import TableSearch from '@/components/TableSearch';
 import { classesData, role, studentsData, teachersData } from '@/lib/data';
-import { Classes, Column, Student, Teacher } from '@/lib/dataTypes';
+import { Class, Column, Student, Teacher } from '@/lib/dataTypes';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -43,7 +43,7 @@ const columns: Column[] = [
 ];
 
 const ClassesListPage = (props: Props) => {
-  const renderRow = (item: Classes) => {
+  const renderRow = (item: Class) => {
     return (
       <tr key={item.id} className='border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight'>
         

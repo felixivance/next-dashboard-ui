@@ -43,10 +43,17 @@ export type Column = {
     teachers: string[];
   }
 
-  export type Classes = {
+  export type Class = {
     id: number;
     name: string;
     capacity: number;
     grade: number;
     supervisor: string;
+  }
+
+  export type Lesson = {
+    id: number;
+    subject: string;
+    class: string;
+    teacher: string;
   }
