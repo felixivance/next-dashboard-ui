@@ -47,7 +47,7 @@ const ClassesListPage = (props: Props) => {
     return (
       <tr key={item.id} className='border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight'>
         
-        <td className="hidden md:table-cell">{item.id}</td>
+        <td className="hidden md:table-cell py-4">{item.id}</td>
         <td className="hidden md:table-cell">{item.name}</td>
         <td className="hidden md:table-cell">{item.capacity}</td>
         <td className="hidden md:table-cell">{item.grade}</td>

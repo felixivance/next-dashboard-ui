@@ -29,11 +29,7 @@ const columns: Column[] = [
     accessor: 'class',
     className: 'hidden md:table-cell',
   },
-  {
-    header: 'Grade',
-    accessor: 'class',
-    className: 'hidden md:table-cell',
-  },
+  
   {
     header: 'Address',
     accessor: 'phone',
@@ -59,13 +55,12 @@ const StudentsListPage = (props: Props) => {
           />
           <div className="flex flex-col">
             <h3 className="font-semibold">{item.name}</h3>
-            <p className="text-xs text-gray-500">{item?.email}</p>
+            <p className="text-xs text-gray-500">{item?.class}</p>
           </div>
         </td>
         <td className="hidden md:table-cell">{item.studentId}</td>
         <td className="hidden md:table-cell">{item.phone}</td>
         <td className="hidden md:table-cell">{item.grade}</td>
-        <td className="hidden md:table-cell">{item.class}</td>
         <td className="hidden md:table-cell">{item.address}</td>
         <td>
           <div className="flex items-center gap-2">
