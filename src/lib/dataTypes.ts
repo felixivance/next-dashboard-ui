@@ -36,3 +36,9 @@ export type Column = {
     phone: string;
     address: string;
   }
+
+  export type Subject = {
+    id:number;
+    name: string;
+    teachers: string[];
+  }
