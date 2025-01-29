@@ -22,8 +22,17 @@ export type Column = {
     name:string;
     email: string;
     photo: string;
-    phone: string;
+    phone?: string;
     grade: number;
     class: string;
     address:string;
+  }
+
+  export type Parent = {
+    id:number;
+    name:string;
+    students: string[];
+    email: string;
+    phone: string;
+    address: string;
   }
