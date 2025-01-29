@@ -19,7 +19,7 @@ const columns: Column[] = [
   {
     header: 'Subject',
     accessor: 'subject',
-    className: 'hidden md:table-cell',
+    className: 'text-center',
   },
   {
     header: 'Class',
@@ -34,7 +34,7 @@ const columns: Column[] = [
   {
     header: 'Student',
     accessor: 'student',
-    className: 'hidden md:table-cell',
+    className: '',
   },
   {
     header: 'Date',
@@ -49,7 +49,7 @@ const columns: Column[] = [
   {
     header: 'Score',
     accessor: 'score',
-    className: 'hidden lg:table-cell',
+    className: '',
   },
   {
     header: 'Actions',
@@ -62,14 +62,14 @@ const ResultsListPage = (props: Props) => {
     return (
       <tr key={item.id} className='border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight'>
         
-        <td className="hidden md:table-cell py-4">{item.id}</td>
-        <td className="hidden md:table-cell">{item.subject}</td>
+        <td className="hidden md:table-cell">{item.id}</td>
+        <td className="p-4 text-center">{item.subject}</td>
         <td className="hidden md:table-cell">{item.class}</td>
         <td className="hidden md:table-cell">{item.teacher}</td>
-        <td className="hidden md:table-cell">{item.student}</td>
+        <td className="">{item.student}</td>
         <td className="hidden md:table-cell">{item.date}</td>
         <td className="hidden md:table-cell">{item.type}</td>
-        <td className="hidden md:table-cell">{item.score}</td>
+        <td className="">{item.score}</td>
         <td>
           <div className="flex items-center gap-2">
             <Link href={`/list/teachers/${item.id}`}>

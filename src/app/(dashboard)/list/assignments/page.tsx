@@ -19,7 +19,7 @@ const columns: Column[] = [
   {
     header: 'Subject',
     accessor: 'subject',
-    className: 'hidden md:table-cell',
+    className: 'text-center',
   },
   {
     header: 'Class',
@@ -34,7 +34,7 @@ const columns: Column[] = [
   {
     header: 'Due Date',
     accessor: 'dueDate',
-    className: 'hidden lg:table-cell',
+    className: '',
   },
   {
     header: 'Actions',
@@ -47,11 +47,11 @@ const StudentsListPage = (props: Props) => {
     return (
       <tr key={item.id} className='border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight'>
         
-        <td className="hidden md:table-cell py-4">{item.id}</td>
-        <td className="hidden md:table-cell">{item.subject}</td>
+        <td className="hidden md:table-cell">{item.id}</td>
+        <td className="p-4 text-center">{item.subject}</td>
         <td className="hidden md:table-cell">{item.class}</td>
         <td className="hidden md:table-cell">{item.teacher}</td>
-        <td className="hidden md:table-cell">{item.dueDate}</td>
+        <td className="">{item.dueDate}</td>
         <td>
           <div className="flex items-center gap-2">
             <Link href={`/list/teachers/${item.id}`}>

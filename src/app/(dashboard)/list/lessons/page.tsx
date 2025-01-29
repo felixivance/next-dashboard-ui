@@ -10,24 +10,26 @@ import React from 'react';
 type Props = {};
 
 const columns: Column[] = [
-  {
-    header: 'Info',
-    accessor: 'info',
-  },
+  
   {
     header: 'Id',
     accessor: 'id',
     className: 'hidden md:table-cell',
   },
   {
-    header: 'Subject',
+    header: 'Subject Name',
     accessor: 'subject',
+    className: 'text-center',
+  },
+  {
+    header: 'Class',
+    accessor: 'class',
     className: 'hidden md:table-cell',
   },
   {
     header: 'Teacher',
     accessor: 'teacher',
-    className: 'hidden md:table-cell',
+    className: 'md:table-cell',
   },
   {
     header: 'Actions',
@@ -40,15 +42,15 @@ const LessonsListPage = (props: Props) => {
     return (
       <tr key={item.id} className='border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight'>
         
-        <td className="hidden md:table-cell py-4">{item.id}</td>
-        <td className="hidden md:table-cell">{item.subject}</td>
+        <td className="hidden md:table-cell">{item.id}</td>
+        <td className="p-4 text-center">{item.subject}</td>
         <td className="hidden md:table-cell">{item.class}</td>
-        <td className="hidden md:table-cell">{item.teacher}</td>
+        <td className="">{item.teacher}</td>
         <td>
           <div className="flex items-center gap-2">
             <Link href={`/list/teachers/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
-                <Image src="/view.png" alt="" width={16} height={16} />
+                <Image src="/edit.png" alt="" width={16} height={16} />
               </button>
             </Link>
             {role === 'admin' && (

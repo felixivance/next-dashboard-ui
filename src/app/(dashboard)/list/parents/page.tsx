@@ -13,6 +13,7 @@ const columns: Column[] = [
   {
     header: 'Id',
     accessor: 'id',
+    className: 'hidden md:table-cell',
   },
   {
     header: 'Info',
@@ -24,11 +25,7 @@ const columns: Column[] = [
     accessor: 'students',
     className: 'hidden md:table-cell',
   },
-  {
-    header: 'Email',
-    accessor: 'email',
-    className: 'hidden md:table-cell',
-  },
+  
   {
     header: 'Phone',
     accessor: 'phone',
@@ -61,13 +58,12 @@ const ParentsListPage = (props: Props) => {
         </td>
         <td className="hidden md:table-cell">{item.students.join(",")}</td>
         <td className="hidden md:table-cell">{item.phone}</td>
-        <td className="hidden md:table-cell">{item.email}</td>
         <td className="hidden md:table-cell">{item.address}</td>
         <td>
           <div className="flex items-center gap-2">
             <Link href={`/list/teachers/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
-                <Image src="/view.png" alt="" width={16} height={16} />
+                <Image src="/edit.png" alt="" width={16} height={16} />
               </button>
             </Link>
             {role === 'admin' && (

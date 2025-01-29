@@ -19,7 +19,6 @@ const columns: Column[] = [
   {
     header: 'Name',
     accessor: 'name',
-    className: 'hidden md:table-cell',
   },
   {
     header: 'Capacity',
@@ -29,12 +28,11 @@ const columns: Column[] = [
   {
     header: 'Grade',
     accessor: 'grade',
-    className: 'hidden md:table-cell',
   },
   {
     header: 'Supervisor',
     accessor: 'supervisor',
-    className: 'hidden lg:table-cell',
+    className: 'hidden md:table-cell',
   },
   {
     header: 'Actions',
@@ -47,16 +45,16 @@ const ClassesListPage = (props: Props) => {
     return (
       <tr key={item.id} className='border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight'>
         
-        <td className="hidden md:table-cell py-4">{item.id}</td>
-        <td className="hidden md:table-cell">{item.name}</td>
+        <td className="hidden md:table-cell">{item.id}</td>
+        <td className=" p-4">{item.name}</td>
         <td className="hidden md:table-cell">{item.capacity}</td>
-        <td className="hidden md:table-cell">{item.grade}</td>
+        <td className=" ">{item.grade}</td>
         <td className="hidden md:table-cell">{item.supervisor}</td>
         <td>
           <div className="flex items-center gap-2">
             <Link href={`/list/teachers/${item.id}`}>
               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
-                <Image src="/view.png" alt="" width={16} height={16} />
+                <Image src="/edit.png" alt="" width={16} height={16} />
               </button>
             </Link>
             {role === 'admin' && (
