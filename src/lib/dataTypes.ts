@@ -57,3 +57,11 @@ export type Column = {
     class: string;
     teacher: string;
   }
+
+  export type Exam = {
+    id: number;
+    subject: string;
+    class: string;
+    teacher: string;
+    date: string;
+  }
