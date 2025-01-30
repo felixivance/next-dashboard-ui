@@ -22,8 +22,6 @@ const schema = z.object({
 
 type Inputs = z.infer<typeof schema>;
 
-
-
 const TeacherForm = ({ type, data}: { type: 'create' | 'update'; data?: any; }) => {
     
   const { register, handleSubmit, formState: { errors }, } = useForm<Inputs>({
@@ -127,7 +125,7 @@ const TeacherForm = ({ type, data}: { type: 'create' | 'update'; data?: any; }) 
             </p>
           )}
         </div>
-        <div className="flex flex-col gap-2 w-full md:w-1/4 justify-center">
+        <div className="flex flex-col gap-2 w-full md:w-1/4 justify-center border border-dashed p-4">
           <label
             className="text-xs text-gray-500 flex items-center gap-2 cursor-pointer"
             htmlFor="img"
